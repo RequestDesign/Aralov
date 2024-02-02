@@ -1,0 +1,21 @@
+.grid-teams {
+  &__controls {
+    &._mob {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .grid-teams {
+    &__controls {
+      &._desc {
+        display: none;
+      }
+      &._mob {
+        display: flex;
+        margin-top: 8rem;
+      }
+    }
+  }
+}

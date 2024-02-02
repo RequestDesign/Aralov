@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { title: "Главная" })
+  <body>
+    @@include('html/header.html', { modificator:"_detail-services" })
+    <main>
+      @@include('html/baners/baner-details-services.html', {})
+      @@include('html/sections/what-includes.html', {})
+      @@include('html/sections/completing-tasks.html', {})
+      @@include('html/sections/ask-questions.html', {})
+      @@include('html/sections/service-price.html', {})
+      @@include('./html/sections/our-letters.html', { title:"Рекомендательные письма:"}) 
+      @@include('html/sections/order-callback.html', {})
+      @@include('html/sections/it-support.html', {})
+    </main>
+    @@include('html/footer.html', {}) @@include('html/foot.html', {})
+  </body>
+</html>

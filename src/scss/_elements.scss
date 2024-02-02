@@ -1,0 +1,258 @@
+.accordion-price-box {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.4rem;
+  flex: 1 0;
+  &__line {
+    flex: 1 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(119, 119, 119, 0.35);
+    margin-bottom: 0.6rem;
+  }
+  &__price {
+    flex: none;
+  }
+}
+@media (max-width: 48em) {
+  .accordion-price-box {
+    gap: 1.2rem;
+    &__line {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.accordion-range-box {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  .range {
+    &-btn {
+      width: 3.4rem;
+      height: 3.4rem;
+      border-radius: 50%;
+      border: 0.15rem solid $green-color;
+      position: relative;
+      &._disactive {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+      &-minus {
+        &::before {
+          content: '';
+          width: 1.3rem;
+          height: 0.15rem;
+          border-radius: 0.15rem;
+          background-color: $green-color;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      &-plus {
+        &::before {
+          content: '';
+          width: 1.3rem;
+          height: 0.15rem;
+          border-radius: 0.15rem;
+          background-color: $green-color;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        &::after {
+          content: '';
+          width: 0.15rem;
+          height: 1.3rem;
+          border-radius: 0.15rem;
+          background-color: $green-color;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+    &-value {
+      width: 3rem;
+      text-align: center;
+    }
+  }
+}
+@media (max-width: 48em) {
+  .accordion-range-box {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    .range {
+      &-btn {
+        width: 5.6rem;
+        height: 5.6rem;
+        border: 0.3rem solid $green-color;
+        &-minus {
+          &::before {
+            width: 2.2rem;
+            height: 0.25rem;
+            border-radius: 0.15rem;
+          }
+        }
+        &-plus {
+          &::before {
+            width: 2.2rem;
+            height: 0.25rem;
+            border-radius: 0.15rem;
+          }
+          &::after {
+            width: 0.25rem;
+            height: 2.2rem;
+            border-radius: 0.15rem;
+          }
+        }
+      }
+      &-value {
+        width: 4rem;
+      }
+    }
+  }
+}
+
+.accordion-range-price-box {
+  display: flex;
+  align-items: center;
+  gap: 2.8rem;
+}
+@media (max-width: 48em) {
+  .accordion-range-price-box {
+    gap: 1.2rem;
+  }
+}
+
+.input {
+  width: 100%;
+  padding: 1.8rem 4rem;
+  border-radius: 50rem;
+  background-color: #fff;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: relative;
+  & input[type='file'] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    display: block;
+    width: 0;
+    height: 0;
+  }
+  &._popup {
+    background-color: #f7f7f7;
+  }
+  &::placeholder,
+  label {
+    font-family: Formular;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: rgba(119, 119, 119, 0.5);
+  }
+}
+@media (max-width: 48em) {
+  .input {
+    padding: 3.2rem 8rem 3.2rem 4rem;
+    font-size: 2.8rem;
+    border-radius: 100rem;
+    &::placeholder,
+    label {
+      font-size: 2.8rem;
+    }
+  }
+}
+
+.stroke-panel {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% + 3rem);
+    height: 80%;
+    border: 1px solid #050505;
+    border-radius: 8rem;
+  }
+  &._teams {
+    &::after {
+      content: '';
+      width: 4.2rem;
+      height: 4.2rem;
+      background-image: url('../img/sections/baner-teams/icon.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 50%;
+      left: -30%;
+      transform: translateY(-50%);
+    }
+  }
+}
+@media (max-width: 48em) {
+  .stroke-panel {
+    &::before {
+      width: calc(100% + 4rem);
+      height: calc(100% + 2rem);
+    }
+    &._teams {
+      &::after {
+        width: 6rem;
+        height: 6rem;
+        left: 115%;
+      }
+    }
+  }
+}
+
+.point-map {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: $green-color;
+  position: relative;
+  margin: 0.8rem;
+  &::before {
+    content: '';
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: $green-color;
+    opacity: 0.5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  &::after {
+    content: 'Первомайский пер., д. 3 кв.145';
+    color: $white-color;
+    font-family: Formular;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 1.2rem 1.6rem;
+    border-radius: 4rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    opacity: 0.8;
+    backdrop-filter: blur(61px);
+    position: absolute;
+    top: calc(100% + 1.2rem);
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+}

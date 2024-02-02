@@ -1,0 +1,345 @@
+<script src="./js/popup.js"></script>
+<!-- <div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+				Text
+			</div>
+		</div>
+	</div>
+</div> -->
+
+<div id="question-popup" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <button data-close type="button" class="popup__close">
+        <svg>
+          <use xlink:href="@img/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <div class="popup__head">
+          <p class="popup__title setup--h2">У вас возник вопрос?</p>
+          <p class="popup__text setup--text-18px setup--grey">
+            Заполните заявку на обратный звонок или свяжитесь с нами любым
+            удобным для Вас способом: по телефону, почте или в мессенджерах.
+          </p>
+        </div>
+        <div class="popup__forms _questions">
+          <div class="popup__forms-fields">
+            <input
+              type="text"
+              class="order-callback__input input _popup"
+              placeholder="Имя"
+            />
+            <input
+              type="text"
+              class="order-callback__input input _popup"
+              placeholder="Телефон"
+            />
+          </div>
+        </div>
+        <div class="popup__buttons">
+          <div class="component--green-btn green-btn @@status">
+            <p
+              class="green-btn__text setup--text-18px"
+              data-hover="Оставить заявку"
+            >
+              Оставить заявку
+            </p>
+          </div>
+          <div class="popup__policy">
+            <p class="setup--text-18px setup--grey">
+              Отправляя заявку, вы соглашаетесь<br />
+              с <span>политикой конфиденциальности</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="callback-popup" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <button data-close type="button" class="popup__close">
+        <svg>
+          <use xlink:href="@img/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <div class="popup__head">
+          <p class="popup__title setup--h2">Закажите обратный звонок</p>
+          <p class="popup__text setup--text-18px setup--grey">
+            Или свяжитесь с нами любым удобным для Вас способом:<br />по
+            телефону, почте или в мессенджерах.
+          </p>
+        </div>
+        <div class="popup__forms _questions">
+          <div class="popup__forms-fields">
+            <input
+              type="text"
+              class="order-callback__input input _popup"
+              placeholder="Имя"
+            />
+            <input
+              type="text"
+              class="order-callback__input input _popup"
+              placeholder="Телефон"
+            />
+          </div>
+        </div>
+        <div class="popup__buttons">
+          <div class="component--green-btn green-btn @@status" data-popup="#accepted-popup">
+            <p
+              class="green-btn__text setup--text-18px"
+              data-hover="Оставить заявку"
+            >
+              Оставить заявку
+            </p>
+          </div>
+          <div class="popup__policy">
+            <p class="setup--text-18px setup--grey">
+              Отправляя заявку, вы соглашаетесь<br />
+              с <span>политикой конфиденциальности</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="services-popup" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <button data-close type="button" class="popup__close">
+        <svg>
+          <use xlink:href="@img/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <div class="popup__head">
+          <p class="popup__title setup--h2">Заказать услугу</p>
+          <p class="popup__text setup--text-18px setup--grey">
+            Заполните заявку или свяжитесь с нами любым удобным для Вас способом: по телефону, почте или в мессенджерах.
+          </p>
+        </div>
+        <div class="popup__forms _questions">
+          <div class="popup__forms-fields">
+            <input
+              type="text"
+              class="order-callback__input input _popup"
+              placeholder="Имя"
+            />
+            <input
+              type="text"
+              class="order-callback__input input _popup"
+              placeholder="Телефон"
+            />
+          </div>
+          <div class="popup__forms-1field">
+            <textarea
+              class="order-callback__textarea input _popup"
+              placeholder="Сообщение"
+            ></textarea>
+          </div>
+        </div>
+        <div class="popup__buttons">
+          <div class="component--green-btn green-btn @@status">
+            <p
+              class="green-btn__text setup--text-18px"
+              data-hover="Оставить заявку"
+            >
+              Оставить заявку
+            </p>
+          </div>
+          <div class="popup__policy">
+            <p class="setup--text-18px setup--grey">
+              Отправляя заявку, вы соглашаетесь<br />
+              с <span>политикой конфиденциальности</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="accepted-popup" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <button data-close type="button" class="popup__close">
+        <svg>
+          <use xlink:href="@img/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner _accepted">
+        <div class="popup__head _accepted">
+          <p class="popup__title setup--h2">Заявка принята</p>
+          <p class="popup__text setup--text-18px setup--grey">
+            Благодарим вас за заявку! Мы приняли её, и наш менеджер свяжется с
+            вами в ближайшее время.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="teams-popup" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <button data-close type="button" class="popup__close">
+        <svg>
+          <use xlink:href="@img/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <div class="popup__head">
+          <p class="popup__title setup--h2">Хотите стать частью команды?</p>
+          <p class="popup__text setup--text-18px setup--grey">
+            Заполните форму ниже, выберите желаемую должность, расскажите о себе
+            и прикрепите Ваше резюме документом или добавьте ссылку на него.
+          </p>
+        </div>
+        <div class="popup__forms _questions">
+          <div class="popup__forms-fields">
+            <input
+              type="text"
+              class="order-callback__input input _popup"
+              placeholder="Имя"
+            />
+            <input
+              type="text"
+              class="order-callback__input input _popup"
+              placeholder="Фамилия"
+            />
+          </div>
+          <div class="popup__forms-fields">
+            <input
+              type="text"
+              class="order-callback__input input _popup"
+              placeholder="Телефон"
+            />
+            <input
+              type="text"
+              class="order-callback__input input _popup"
+              placeholder="Email"
+            />
+          </div>
+          <div class="popup__forms-fields">
+            <div class="order-callback__input input _popup">
+              <input
+                type="file"
+                id="fileInput"
+                class="order-callback__input input _popup"
+                placeholder="Документ с резюме"
+              />
+              <label for="fileInput">Документ с резюме</label>
+            </div>
+            <input
+              type="text"
+              class="order-callback__input input _popup"
+              placeholder="Ссылка на резюме"
+            />
+          </div>
+          <div class="popup__forms-field">
+            <textarea
+              class="order-callback__textarea input _popup"
+              placeholder="Кратко расскажите о себе, почему вам интересна вакансия и чего ожидаете от работы в компании"
+            ></textarea>
+          </div>
+        </div>
+        <div class="popup__buttons">
+          <div class="component--green-btn green-btn @@status">
+            <p
+              class="green-btn__text setup--text-18px"
+              data-hover="Оставить заявку"
+            >
+              Оставить заявку
+            </p>
+          </div>
+          <div class="popup__policy">
+            <p class="setup--text-18px setup--grey">
+              Отправляя заявку, вы соглашаетесь<br />
+              с <span>политикой конфиденциальности</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="letters-popup" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content _letters">
+      <div class="popup-letters__swiper">
+        <div class="popup-letters-swiper swiper">
+          <div class="swiper-wrapper">
+            <div class="popup-letters-slide swiper-slide">
+              <div class="popup-letters__slide">
+                <img src="@img/components/component-letters/popup-letter.webp" alt="" />
+                <p class="popup-letters__name setup--h3">Аэропорт Шереметьево</p>
+              </div>
+            </div>
+            <div class="popup-letters-slide swiper-slide">
+              <div class="popup-letters__slide">
+                <img src="@img/components/component-letters/popup-letter.webp" alt="" />
+                <p class="popup-letters__name setup--h3">Аэропорт Пулково</p>
+              </div>
+            </div>
+            <div class="popup-letters-slide swiper-slide">
+              <div class="popup-letters__slide">
+                <img src="@img/components/component-letters/popup-letter.webp" alt="" />
+                <p class="popup-letters__name setup--h3">Аэропорт Шереметьево</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-letters__cell"></div>
+      <div class="popup__controls _letters">
+        <button data-close type="button" class="popup__close _controls">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M7.75781 7.75732L16.2431 16.2426"
+              stroke="#03A081"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M7.75691 16.2426L16.2422 7.75732"
+              stroke="#03A081"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <div class="popup__control setup--swiper-buttons">
+          <button type="button" class="swiper-button-prev btn-prev">
+            <svg class="swiper-button-arrow">
+              <use xlink:href="@img/sprite.svg#arrowline"></use>
+            </svg>
+          </button>
+          <button type="button" class="swiper-button-next btn-next">
+            <svg class="swiper-button-arrow">
+              <use xlink:href="@img/sprite.svg#arrowline"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

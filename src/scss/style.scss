@@ -1,0 +1,45 @@
+@import 'set';
+@import 'setup';
+@import 'fonts';
+@import 'components';
+@import 'elements';
+@import 'swiper';
+@import 'animations';
+@import 'popup';
+
+@import 'header';
+@import 'footer';
+
+@import './baners/baner-main';
+@import './baners/baner-teams';
+@import './baners/baner-services';
+@import './baners/baner-details-services';
+@import './baners/baner-articles';
+@import './baners/baner-company';
+@import './baners/baner-reviews';
+
+@import './sections/it-support';
+@import './sections/our-advantages';
+@import './sections/our-services';
+@import './sections/our-articles';
+@import './sections/our-teams';
+@import './sections/our-letters';
+@import './sections/our-contacts';
+@import './sections/our-clients';
+@import './sections/prices-list';
+@import './sections/cost-calculation';
+@import './sections/total-calculation';
+@import './sections/choose-tariffs';
+@import './sections/basic-directions';
+@import './sections/reliable-professional';
+@import './sections/service-price';
+@import './sections/ask-questions';
+@import './sections/completing-tasks';
+@import './sections/what-includes';
+@import './sections/article-info';
+@import './sections/order-callback';
+@import './sections/providing-solutions';
+@import './sections/freelancer';
+@import './sections/grid-articles';
+@import './sections/grid-teams';
+@import './sections/grid-reviews';

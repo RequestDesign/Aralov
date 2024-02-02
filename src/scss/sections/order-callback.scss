@@ -1,0 +1,369 @@
+.order-callback {
+  &._company {
+    .company-callback {
+      &__content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        .content {
+          &-left {
+            display: flex;
+            gap: 9.2rem;
+            padding-left: 3.3rem;
+            &__decoration {
+              width: 40.8rem;
+              margin-top: 4rem;
+            }
+            &__white-panel {
+              width: 32rem;
+              height: 27rem;
+              background-image: url('../img/sections/order-callback/company-callback-white-panel-desc.svg');
+              background-repeat: no-repeat;
+              background-size: contain;
+              padding: 4rem;
+              position: relative;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              margin: 1rem 1rem 0 0;
+              .white-panel {
+                &__title {
+                  font-family: NeueMachina;
+                }
+                &__img {
+                  width: 24rem;
+                  ._mob {
+                    display: none;
+                  }
+                }
+                &__btn {
+                  position: absolute;
+                  top: -1rem;
+                  right: -1rem;
+                  transform: rotate(-135deg);
+                }
+              }
+            }
+          }
+          &-right {
+            width: 67.7rem;
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+            padding-bottom: 8.4rem;
+            border-bottom: 1px solid rgba(119, 119, 119, 0.4);
+            margin-top: 2.4rem;
+            &__title {
+              font-family: NeueMachina;
+            }
+          }
+        }
+      }
+    }
+    .order-callback {
+      &__container {
+        padding-top: 18rem;
+        position: relative;
+      }
+      &__head {
+        margin-bottom: 4rem;
+      }
+      &__content {
+        align-items: flex-end;
+        gap: 18.4rem;
+        .content {
+          &-right {
+            padding-bottom: 9.6rem;
+          }
+        }
+      }
+      &__title {
+        margin-bottom: 0;
+      }
+      &__box {
+        justify-content: space-between;
+        gap: 0;
+      }
+    }
+  }
+  &__head {
+    width: 67.7rem;
+    margin-bottom: 6rem;
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: 82rem auto;
+    gap: 4rem;
+    .content {
+      &-left {
+        width: 82rem;
+        height: 57.7rem;
+        background-image: url('../img/sections/order-callback/order-callback-bg.webp');
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding: 8rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        gap: 6rem;
+        &__panel {
+          width: 39rem;
+          height: 23.8rem;
+          background-image: url('../img/sections/order-callback/order-callback-panel-desc.svg');
+          background-size: contain;
+          background-repeat: no-repeat;
+          position: relative;
+          padding: 2.4rem;
+        }
+        &__icon-box {
+          width: 5.6rem;
+          height: 5.6rem;
+          border-radius: 50%;
+          background-color: $green-color;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 2.9rem;
+          & > svg {
+            width: 3.2rem;
+            height: 3.2rem;
+          }
+        }
+        &__data {
+          width: fit-content;
+          padding: 1rem 1.8rem;
+          border: 1px solid rgba(5, 5, 5, 0.25);
+          border-radius: 8.5rem;
+          margin-bottom: 1.9rem;
+          br {
+            display: none;
+          }
+        }
+        &__btn {
+          position: absolute;
+          top: -2rem;
+          right: 0;
+        }
+      }
+    }
+  }
+  &__title {
+    font-family: NeueMachina;
+    margin-bottom: 2.4rem;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-bottom: 4rem;
+  }
+  &__inputs {
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  &__textarea {
+    height: 12rem;
+    border-radius: 2rem;
+    resize: none;
+    &._popup {
+      height: 13rem;
+    }
+  }
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+  }
+  &__policy {
+    width: 42rem;
+    span {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .order-callback {
+    &._company {
+      .company-callback {
+        &__content {
+          flex-direction: column-reverse;
+          gap: 8rem;
+          position: static;
+          margin-bottom: 16rem;
+          .content {
+            &-left {
+              padding-left: 0;
+              &__decoration {
+                display: none;
+              }
+              &__white-panel {
+                width: 100%;
+                height: 24.4rem;
+                background-image: url('../img/sections/order-callback/company-callback-white-panel-mob.svg');
+                padding: 4rem;
+                flex-direction: row;
+                justify-content: space-between;
+                margin: 3.6rem 2rem 0 0;
+                .white-panel {
+                  &__title {
+                    margin-bottom: 2.4rem;
+                  }
+                  &__img {
+                    width: 24rem;
+                    align-items: flex-end;
+                    ._desc {
+                      display: none;
+                    }
+                    ._mob {
+                      display: block;
+                    }
+                  }
+                  &__btn {
+                    top: -2rem;
+                    right: -1.6rem;
+                  }
+                }
+              }
+            }
+            &-right {
+              width: 100%;
+              gap: 3.2rem;
+              padding-bottom: 0;
+              border-bottom: none;
+              margin-top: 0;
+            }
+          }
+        }
+      }
+      .order-callback {
+        &__container {
+          padding-top: 0;
+        }
+        &__head {
+          margin-bottom: 4rem;
+        }
+        &__content {
+          align-items: flex-end;
+          gap: 8rem;
+          .content {
+            &-right {
+              padding-bottom: 0;
+            }
+          }
+        }
+        &__box {
+          gap: 4rem;
+        }
+      }
+    }
+
+    &__head {
+      width: 100%;
+      margin-bottom: 4rem;
+    }
+    &__slide {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      height: 28rem;
+      padding: 3rem 2rem;
+    }
+    &__content {
+      display: flex;
+      flex-direction: column-reverse;
+      grid-template-columns: 1fr;
+      gap: 8rem;
+      .content {
+        &-left {
+          width: 100%;
+          height: 50rem;
+          background-image: url('../img/sections/order-callback/order-callback-bg-mob.webp');
+          padding: 6rem;
+          gap: 7.2rem;
+          &__panel {
+            width: 33.6rem;
+            height: 28rem;
+            background-image: url('../img/sections/order-callback/order-callback-panel-mob.svg');
+            padding: 0;
+            position: relative;
+          }
+          &__icon-box {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 8rem;
+            height: 8rem;
+            margin-bottom: 0;
+            & > svg {
+              width: 4.8rem;
+              height: 4.8rem;
+            }
+          }
+          &__data {
+            width: fit-content;
+            width: 29.6rem;
+            height: 10rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            border: none;
+            border-radius: 10rem;
+            color: $white-color;
+            font-size: 2.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            background-color: $green-color;
+            margin-bottom: 0;
+            text-align: center;
+            br {
+              display: block;
+            }
+          }
+          &__btn {
+            display: none;
+          }
+        }
+      }
+    }
+    &__title {
+      margin-bottom: 4rem;
+    }
+    &__form {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      margin-bottom: 4rem;
+    }
+    &__inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    &__textarea {
+      display: none;
+      &._popup {
+        display: block;
+        height: 30rem;
+        border-radius: 4rem;
+      }
+    }
+    &__box {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4rem;
+    }
+    &__policy {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,128 @@
+// color
+$black-color: #050505;
+$white-color: #ffffff;
+$grey-color: #777777;
+$light-grey-color: #eaeaea;
+$green-color: #03a081;
+
+.setup--grey {
+  color: $grey-color;
+}
+.setup--black {
+  color: $black-color;
+}
+.setup--green {
+  color: $green-color;
+}
+
+body {
+  background-color: $light-grey-color;
+}
+
+// fonts
+
+.setup--h1 {
+  font-size: 7.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 7.2rem;
+}
+.setup--h2 {
+  font-size: 4.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 4.6rem;
+}
+.setup--h3 {
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.setup--text-24px {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.setup--text-18px {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.2rem;
+}
+
+@media (max-width: 48em) {
+  .setup--h1 {
+    font-size: 8rem;
+    line-height: 104%;
+  }
+  .setup--h2 {
+    font-size: 5.2rem;
+  }
+  .setup--h3 {
+    font-size: 4.4rem;
+    line-height: 110%;
+  }
+  .setup--text-24px,
+  .setup--text-18px {
+    font-size: 2.8rem;
+    line-height: 3.6rem;
+  }
+}
+
+.setup--section-title {
+  @extend .setup--h1;
+  @extend .setup--black;
+  margin-bottom: 6rem;
+  font-family: NeueMachina;
+}
+@media (max-width: 48em) {
+  .setup--section-title {
+    margin-bottom: 8rem;
+  }
+}
+
+.setup--section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: NeueMachina;
+}
+@media (max-width: 48em) {
+  .setup--section-head {
+    padding: 0 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4rem;
+  }
+}
+
+.setup--swiper-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 48em) {
+  .swiper {
+    &.setup--mobile-swiper {
+      margin-left: -2rem;
+      margin-right: -2rem;
+      padding: 0 2rem;
+    }
+  }
+}
+
+.clip-path-svg {
+  width: 0;
+  height: 0;
+}
+
+.tooltip {
+  clip-path: url('#modal'); /* Применяем обрезку из SVG */
+  background-color: #fff; /* Цвет фона tooltip */
+  color: #fff; /* Цвет текста tooltip */
+  width: 100px; /* Ширина tooltip */
+  height: 100px; /* Высота tooltip */
+  position: relative;
+}

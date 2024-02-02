@@ -1,0 +1,428 @@
+#baner-services-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.baner-details-services {
+  &__content {
+    display: grid;
+    grid-template-columns: 62rem 1fr;
+    grid-template-rows: 88rem;
+    gap: 24rem;
+    .content {
+      &-left {
+        margin-top: 7.4rem;
+        position: relative;
+      }
+      &-right {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
+    }
+  }
+  &__title {
+    font-family: NeueMachina;
+    margin-bottom: 2rem;
+  }
+  &__text {
+    margin-bottom: 6rem;
+  }
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    .component--arrow-btn {
+      .arrow-btn {
+        &__text {
+          color: $grey-color;
+        }
+      }
+    }
+  }
+  &__accordion {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    .baner-services-accordion {
+      &__element {
+        width: 53.3rem;
+        padding: 1rem 1rem 1rem 3.5rem;
+        background-color: $white-color;
+        border-radius: 4rem;
+        &.acc_active {
+          .prices-list-accordion {
+            &__btn {
+              background-color: transparent;
+              transition: all 0.25s ease-in-out;
+              will-change: all;
+            }
+            &__arrow {
+              fill: $green-color;
+              transform: rotate(180deg);
+              transition: all 0.25s ease-in-out;
+              will-change: all;
+            }
+          }
+        }
+      }
+      &__head {
+        display: flex;
+        align-items: center;
+      }
+      &__icon {
+        width: 3.2rem;
+        height: 3.2rem;
+        margin-right: 2rem;
+      }
+      &__title {
+        margin-right: auto;
+      }
+      &__inner {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+      &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+    }
+  }
+  &__background {
+    width: 91rem;
+    height: 99rem;
+    position: absolute;
+    right: -9rem;
+    top: -11rem;
+    background-image: url('../img/sections/baner-details-services/baner-services-bg-desc.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  &__whats-the-benefit {
+    width: 81rem;
+    height: 15.5rem;
+    background-image: url('../img/sections/baner-details-services/baner-services-white-panel.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    margin: 1rem 0;
+    .whats-the-benefit {
+      &__image {
+        width: 19.5rem;
+        border-radius: 2rem;
+      }
+      &__texts {
+        width: 46.8rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+    }
+  }
+  &__trade {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background-color: $white-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 1rem;
+    bottom: 2rem;
+    img {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+    &._mob {
+      display: none;
+    }
+  }
+  &__swiper {
+    &-desc {
+      width: 47rem;
+      position: absolute;
+      top: 21.8rem;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    &-mob {
+      display: none;
+    }
+  }
+  &__slide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &._dec {
+      position: relative;
+      padding-right: 9rem;
+      margin-right: -9rem;
+      .baner-services-swiper {
+        &__element {
+          opacity: 0;
+          transition: opacity 0.5s ease-in-out;
+        }
+        &__numbering {
+          opacity: 0;
+          transition: opacity 0.5s ease-in-out;
+        }
+      }
+      &::after {
+        content: '';
+        width: 2rem;
+        height: 100%;
+        border-radius: 4rem;
+        background-color: $white-color;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: background-color 0.5s ease-in-out;
+      }
+      &._active {
+        .baner-services-swiper {
+          &__element {
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+          }
+          &__numbering {
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+          }
+        }
+        &::after {
+          background-color: $green-color;
+          transition: background-color 0.5s ease-in-out;
+        }
+      }
+    }
+    .baner-services-swiper {
+      &__numbering {
+        p {
+          color: $white-color;
+          font-family: NeueMachina;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+      &__element {
+        width: 43rem;
+        border-radius: 50rem;
+        border: 1px solid #fff;
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(44.5px);
+        padding: 1rem;
+      }
+      &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1rem 1rem 3rem;
+        border-radius: 4rem;
+        background-color: #fff;
+      }
+      &__icon {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        background-color: $green-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & > svg {
+          width: 3.2rem;
+          height: 3.2rem;
+        }
+      }
+    }
+  }
+  &__pagination {
+    width: 2rem;
+    height: 31.6rem;
+    position: absolute;
+    top: 21.8rem;
+    right: -9rem;
+    .swiper-pagination-bullet {
+      width: 2rem;
+      height: 10rem;
+      border-radius: 4rem;
+      background-color: #fff;
+      opacity: 1;
+      &-active {
+        background-color: $green-color;
+      }
+    }
+  }
+}
+@media (max-width: 48em) {
+  .baner-details-services {
+    &__content {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: 8rem;
+      .content {
+        &-left {
+          margin-top: 0;
+        }
+        &-right {
+          position: static;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+        }
+      }
+    }
+    &__title {
+      margin-bottom: 4rem;
+    }
+    &__text {
+      margin-bottom: 4rem;
+    }
+    &__links {
+      margin-bottom: 8rem;
+      justify-content: space-between;
+      gap: 0;
+      .component--green-btn {
+        padding: 3.2rem 4.6rem;
+      }
+    }
+    &__accordion {
+      position: static;
+      .baner-services-accordion {
+        &__element {
+          width: 100%;
+          padding: 1rem 1rem 1rem 4.8rem;
+          border-radius: 4rem;
+          // &.acc_active {
+          //   border-radius: 4rem;
+          // }
+        }
+        &__icon {
+          width: 4.8rem;
+          height: 4.8rem;
+        }
+        &__inner {
+          padding-top: 2rem;
+          padding-bottom: 2rem;
+        }
+        &__list {
+          display: flex;
+          flex-direction: column;
+          gap: 0.8rem;
+        }
+      }
+    }
+    &__background {
+      width: 71rem;
+      height: 21rem;
+      position: relative;
+      right: 0;
+      top: 0;
+      background-image: url('../img/sections/baner-details-services/baner-services-bg-mob.svg');
+      z-index: 0;
+    }
+    &__whats-the-benefit {
+      width: 100%;
+      height: auto;
+      background-image: none;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      padding: 0;
+      margin: 4rem 0;
+      .whats-the-benefit {
+        &__image {
+          display: none;
+        }
+        &__title {
+          font-size: 3.6rem;
+        }
+        &__texts {
+          width: 100%;
+        }
+      }
+    }
+    &__swiper {
+      // height: 10rem;
+      // position: static;
+      &-desc {
+        display: none;
+      }
+      &-mob {
+        display: block;
+        width: 71rem;
+      }
+    }
+    &__trade {
+      width: 8rem;
+      height: 8rem;
+      right: 0;
+      bottom: 0;
+      img {
+        width: 4.2rem;
+        height: 4.2rem;
+      }
+      &._desc {
+        display: none;
+      }
+      &._mob {
+        display: flex;
+      }
+    }
+    &__slide {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .baner-services-swiper {
+        &__numbering {
+          display: none;
+        }
+        &__element {
+          width: 58rem;
+          border-radius: 8rem;
+          border: none;
+          background-color: $white-color;
+          backdrop-filter: none;
+          padding: 1rem;
+        }
+        &__inner {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 1rem 1rem 1rem 3rem;
+          border-radius: 4rem;
+          background-color: #fff;
+        }
+        &__icon {
+          width: 6rem;
+          height: 6rem;
+          border-radius: 50%;
+          background-color: $green-color;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          & > svg {
+            width: 3.2rem;
+            height: 3.2rem;
+          }
+        }
+      }
+    }
+    &__pagination {
+      display: none;
+    }
+  }
+}
